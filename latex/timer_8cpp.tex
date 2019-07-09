@@ -1,0 +1,46 @@
+\hypertarget{timer_8cpp}{\subsection{timer.\+cpp File Reference}
+\label{timer_8cpp}\index{timer.\+cpp@{timer.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for timer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{timer_8cpp_a13ed8751dfa95731ad8930762493b16b}{timer} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is a time function which keeps track of the time void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{timer_8cpp_a13ed8751dfa95731ad8930762493b16b}{\index{timer.\+cpp@{timer.\+cpp}!timer@{timer}}
+\index{timer@{timer}!timer.\+cpp@{timer.\+cpp}}
+\paragraph[{timer}]{\setlength{\rightskip}{0pt plus 5cm}void timer (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{timer_8cpp_a13ed8751dfa95731ad8930762493b16b}
+
+
+This is a time function which keeps track of the time void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{comment}{//std::cout << "1 sec" << std::endl;}
+6     \textcolor{keyword}{static} \textcolor{keywordtype}{int} s = 0; \textcolor{keyword}{static} \textcolor{keywordtype}{int} m = 0;
+7     std::ostringstream oss; 
+8     
+9     s++; \textcolor{keywordflow}{if} (s == 59) \{s=0; m++;\}
+10     oss << std::setfill(\textcolor{charliteral}{'0'});
+11     oss << std::setw(2) << m << \textcolor{stringliteral}{":"} << std::setw(2) << s;
+12     \hyperlink{lab_8h_a05c7f6e86cca5f4d0ebf44d1f5042c37}{watch}->value(oss.str().c\_str());
+13     
+14     Fl::repeat\_timeout(1,\hyperlink{timer_8cpp_a13ed8751dfa95731ad8930762493b16b}{timer}); \textcolor{comment}{//repeats after every second}
+15  
+16 \}
+\end{DoxyCode}

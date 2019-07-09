@@ -1,0 +1,122 @@
+\hypertarget{main_8cpp}{\subsection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{main_8cpp_abf805c82a90897837d1c26ef915f1cd6}{pizza}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{main_8cpp_a0ce7586472726848924b4964b80e69ba}{address}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{main_8cpp_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}
+\item 
+Fl\+\_\+\+Output $\ast$ \hyperlink{main_8cpp_a05c7f6e86cca5f4d0ebf44d1f5042c37}{watch}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{main_8cpp_aea2b8efadc87a819fe57c311d668e504}{buff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{main_8cpp_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{main_8cpp_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{main_8cpp_a23f917547a833922fd6bc8797cc04ee1}{order\+Q}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{main_8cpp_ad042fec17c471064617911f13dca15a8}{cooked\+Q}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{main_8cpp_a20a356461cec27fe0d294f923f7ebd01}{driver\+Q}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+18 \{
+19     Fl\_Cairo\_Window cw(400,300); \textcolor{comment}{//width and height of the window}
+20     cw.label(\textcolor{stringliteral}{"Pizza Deliveries"});\textcolor{comment}{//title of your window}
+21     \textcolor{comment}{//cw.color(FL\_BLUE);}
+22     
+23     \hyperlink{main_8cpp_abf805c82a90897837d1c26ef915f1cd6}{pizza} = \textcolor{keyword}{new} Fl\_Input(180,20,100,20, \textcolor{stringliteral}{"Pizza:"});
+24     \hyperlink{main_8cpp_abf805c82a90897837d1c26ef915f1cd6}{pizza}->labelcolor(FL\_BLUE);
+25     
+26     \hyperlink{main_8cpp_a0ce7586472726848924b4964b80e69ba}{address} = \textcolor{keyword}{new} Fl\_Input(180,40,100,20, \textcolor{stringliteral}{"Address:"});
+27     \hyperlink{main_8cpp_a0ce7586472726848924b4964b80e69ba}{address}->labelcolor(FL\_BLUE);
+28     
+29     \hyperlink{main_8cpp_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver} = \textcolor{keyword}{new} Fl\_Input(180,60,100,20, \textcolor{stringliteral}{"Driver:"});
+30     \hyperlink{main_8cpp_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}->labelcolor(FL\_BLUE);
+31     
+32     \hyperlink{main_8cpp_a05c7f6e86cca5f4d0ebf44d1f5042c37}{watch} = \textcolor{keyword}{new} Fl\_Output(70,20,60,20, \textcolor{stringliteral}{"seconds:"});
+33     
+34     \hyperlink{main_8cpp_aea2b8efadc87a819fe57c311d668e504}{buff} = \textcolor{keyword}{new} Fl\_Text\_Buffer();
+35     \hyperlink{main_8cpp_a23f917547a833922fd6bc8797cc04ee1}{orderQ} = \textcolor{keyword}{new} Fl\_Text\_Display(50,100,100,100,\textcolor{stringliteral}{"Order Q"});
+36     \hyperlink{main_8cpp_a23f917547a833922fd6bc8797cc04ee1}{orderQ}->buffer(\hyperlink{main_8cpp_aea2b8efadc87a819fe57c311d668e504}{buff});
+37     
+38     \hyperlink{main_8cpp_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff} = \textcolor{keyword}{new} Fl\_Text\_Buffer();
+39     \hyperlink{main_8cpp_ad042fec17c471064617911f13dca15a8}{cookedQ} = \textcolor{keyword}{new} Fl\_Text\_Display(150,100,100,100,\textcolor{stringliteral}{"Cooked Q"});
+40     \hyperlink{main_8cpp_ad042fec17c471064617911f13dca15a8}{cookedQ}->buffer(\hyperlink{main_8cpp_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff});
+41 
+42     \hyperlink{main_8cpp_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff} = \textcolor{keyword}{new} Fl\_Text\_Buffer();
+43     \hyperlink{main_8cpp_a20a356461cec27fe0d294f923f7ebd01}{driverQ} = \textcolor{keyword}{new} Fl\_Text\_Display(250,100,100,100,\textcolor{stringliteral}{"Driver Q"});
+44     \hyperlink{main_8cpp_a20a356461cec27fe0d294f923f7ebd01}{driverQ}->buffer(\hyperlink{main_8cpp_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff});
+45     
+46     Fl\_Button b(280,35,50,20, \textcolor{stringliteral}{"Order"});
+47     b.callback((Fl\_Callback*)\hyperlink{lab_8h_a547f84331a8c529348e1130ca169c69c}{order\_cb});
+48     
+49     Fl\_Button a(280,60,50,20, \textcolor{stringliteral}{"Add"});
+50     a.callback((Fl\_Callback*)\hyperlink{driver__cb_8cpp_a2edcbf888225d725652a44b6a98d64c2}{driver\_cb});
+51     cw.show();
+52     Fl::add\_timeout(1,\hyperlink{lab_8h_a13ed8751dfa95731ad8930762493b16b}{timer});
+53     \textcolor{keywordflow}{return} Fl::run();
+54     \}
+\end{DoxyCode}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{main_8cpp_a0ce7586472726848924b4964b80e69ba}{\index{main.\+cpp@{main.\+cpp}!address@{address}}
+\index{address@{address}!main.\+cpp@{main.\+cpp}}
+\paragraph[{address}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ address}}\label{main_8cpp_a0ce7586472726848924b4964b80e69ba}
+\hypertarget{main_8cpp_aea2b8efadc87a819fe57c311d668e504}{\index{main.\+cpp@{main.\+cpp}!buff@{buff}}
+\index{buff@{buff}!main.\+cpp@{main.\+cpp}}
+\paragraph[{buff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ buff}}\label{main_8cpp_aea2b8efadc87a819fe57c311d668e504}
+\hypertarget{main_8cpp_a3a16cd8310a89f45962eb39b72bb9bb1}{\index{main.\+cpp@{main.\+cpp}!cbuff@{cbuff}}
+\index{cbuff@{cbuff}!main.\+cpp@{main.\+cpp}}
+\paragraph[{cbuff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ cbuff}}\label{main_8cpp_a3a16cd8310a89f45962eb39b72bb9bb1}
+\hypertarget{main_8cpp_ad042fec17c471064617911f13dca15a8}{\index{main.\+cpp@{main.\+cpp}!cooked\+Q@{cooked\+Q}}
+\index{cooked\+Q@{cooked\+Q}!main.\+cpp@{main.\+cpp}}
+\paragraph[{cooked\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ cooked\+Q}}\label{main_8cpp_ad042fec17c471064617911f13dca15a8}
+\hypertarget{main_8cpp_a5d487f4a7b5d36f823b8b1cb3db75aa4}{\index{main.\+cpp@{main.\+cpp}!dbuff@{dbuff}}
+\index{dbuff@{dbuff}!main.\+cpp@{main.\+cpp}}
+\paragraph[{dbuff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ dbuff}}\label{main_8cpp_a5d487f4a7b5d36f823b8b1cb3db75aa4}
+\hypertarget{main_8cpp_a6f3dbb90a24ffb00549fdd15a79cbd66}{\index{main.\+cpp@{main.\+cpp}!driver@{driver}}
+\index{driver@{driver}!main.\+cpp@{main.\+cpp}}
+\paragraph[{driver}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ driver}}\label{main_8cpp_a6f3dbb90a24ffb00549fdd15a79cbd66}
+\hypertarget{main_8cpp_a20a356461cec27fe0d294f923f7ebd01}{\index{main.\+cpp@{main.\+cpp}!driver\+Q@{driver\+Q}}
+\index{driver\+Q@{driver\+Q}!main.\+cpp@{main.\+cpp}}
+\paragraph[{driver\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ driver\+Q}}\label{main_8cpp_a20a356461cec27fe0d294f923f7ebd01}
+\hypertarget{main_8cpp_a23f917547a833922fd6bc8797cc04ee1}{\index{main.\+cpp@{main.\+cpp}!order\+Q@{order\+Q}}
+\index{order\+Q@{order\+Q}!main.\+cpp@{main.\+cpp}}
+\paragraph[{order\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ order\+Q}}\label{main_8cpp_a23f917547a833922fd6bc8797cc04ee1}
+\hypertarget{main_8cpp_abf805c82a90897837d1c26ef915f1cd6}{\index{main.\+cpp@{main.\+cpp}!pizza@{pizza}}
+\index{pizza@{pizza}!main.\+cpp@{main.\+cpp}}
+\paragraph[{pizza}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ pizza}}\label{main_8cpp_abf805c82a90897837d1c26ef915f1cd6}
+\hypertarget{main_8cpp_a05c7f6e86cca5f4d0ebf44d1f5042c37}{\index{main.\+cpp@{main.\+cpp}!watch@{watch}}
+\index{watch@{watch}!main.\+cpp@{main.\+cpp}}
+\paragraph[{watch}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Output$\ast$ watch}}\label{main_8cpp_a05c7f6e86cca5f4d0ebf44d1f5042c37}

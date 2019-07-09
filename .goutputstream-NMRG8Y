@@ -1,0 +1,150 @@
+#include "config.h"
+#include <FL/Fl_Cairo_Window.H>
+#include <FL/Fl_Input.H>
+#include <FL/Fl_Output.H>
+#include <FL/Fl_Text_Buffer.H>
+#include <FL/Fl_Text_Display.H>
+#include <FL/Fl_Button.H>
+#include <FL/fl_ask.H>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <unistd.h>
+
+
+extern Fl_Input* pizza; //declaration of pizza pointer
+extern Fl_Input* address;
+extern Fl_Input* driver;
+extern Fl_Output* watch;
+extern Fl_Text_Buffer* buff;
+extern Fl_Text_Buffer* cbuff;
+extern Fl_Text_Buffer* dbuff;
+extern Fl_Text_Display* driverQ;
+extern Fl_Text_Display* orderQ;
+extern Fl_Text_Display* cookedQ;
+
+
+/**  \brief This is the callback function to order a pizza
+    void pointers not used
+    return void
+*/
+void order_cb(void*,void*);
+
+/**  \brief This is the callback function to add drivers manually
+    void pointers not used
+    return void
+*/
+void driver_cb(void*);
+
+
+/**  \brief This is the callback function called from the order_cb function which cooks the pizza
+    void pointer not used 
+    return void
+*/
+void cook_cb(void*);
+
+
+/**  \brief This is the callback function called from the cook_cb function which assigns and send drivers out for delivery after the pizza is cooked
+    void pointers not used
+    return void
+*/
+void delivery_cb(void*);
+
+/**  \brief This is the callback function called fron delivery which adds the driver back in the queue after they deliver the pizza
+    void pointers not used
+    return void
+*/
+void addBackDr_cb(void*);
+
+/**  \brief This is a time function which keeps track of the time
+    void pointers not used
+    return void
+*/
+void timer(void*);
+
+
+/**  
+    \brief This struct holds the info and address for the order
+*/
+struct ORDER
+{
+    std::string info;
+    std::string addr;
+    };
+    
+
+
+/**  
+    \brief This struct holds the order(struct) value and pointer to the next NODE
+*/
+struct NODE 
+{   ORDER info;
+    NODE *next;
+    };
+
+class LLQUEUE 
+{ 
+    private:
+        NODE *front;
+        NODE *rear;
+    public:
+    
+/**  
+    \brief This is Linked List Queue's constructor function which sets all the private values to 0
+*/
+        LLQUEUE() {front=rear=0;};
+        
+/**  
+    \brief This is Linked List Queue's destructor function which deletes all the data in the linked list
+*/
+        ~LLQUEUE();
+/**  
+    \brief This is boolean function which inserts data into the list queue
+    \param[in] info is the data that will be added to the list
+    \return boolean letting the user know if the data was inserted sucessfully
+*/    
+        bool Insert (ORDER &info);
+/**  
+    \brief This is boolean function which removes data from the list queue
+    \param[out] info is the data that will be removed to the list
+    \return boolean letting the user know if the data was removed sucessfully
+*/    
+        bool Remove (ORDER &info);
+/**  
+    \brief This is boolean function checks if the list is empty 
+    \return boolean letting the user know if the data was inserted sucessfully
+*/    
+        bool isEmpty() {return (front ==0);}
+        std::string getQcontent();
+    };
+
+const int BUFSIZE = 256;
+
+class RBQUEUE 
+{
+    private:
+        std::string buf[BUFSIZE];
+        int front;
+        int rear;
+        int nextIndex(int index)
+        {
+            if(++index == BUFSIZE)
+            index = 0;
+            return index;
+            }
+        public:
+        RBQUEUE() {front = rear = 0;}
+        ~RBQUEUE() {}
+        bool Insert (std::string s);
+        bool Remove (std::string &s);
+        bool isEmpty() {return (front == rear);}
+        bool isFull() {return (nextIndex(rear) == front);}
+        std::string getRQcontents();
+    };
+    
+extern ORDER ord;
+extern LLQUEUE o;
+extern LLQUEUE c;
+extern RBQUEUE d;
+extern RBQUEUE currD;
+

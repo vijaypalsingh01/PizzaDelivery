@@ -1,0 +1,58 @@
+\hypertarget{delivery__cb_8cpp}{\subsection{delivery\+\_\+cb.\+cpp File Reference}
+\label{delivery__cb_8cpp}\index{delivery\+\_\+cb.\+cpp@{delivery\+\_\+cb.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for delivery\+\_\+cb.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{delivery__cb_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{delivery\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called from the cook\+\_\+cb function which assigns and send drivers out for delivery after the pizza is cooked void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{\index{delivery\+\_\+cb.\+cpp@{delivery\+\_\+cb.\+cpp}!delivery\+\_\+cb@{delivery\+\_\+cb}}
+\index{delivery\+\_\+cb@{delivery\+\_\+cb}!delivery\+\_\+cb.\+cpp@{delivery\+\_\+cb.\+cpp}}
+\paragraph[{delivery\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void delivery\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}
+
+
+This is the callback function called from the cook\+\_\+cb function which assigns and send drivers out for delivery after the pizza is cooked void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{   
+5     
+6      \textcolor{keywordflow}{if}(\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a3a97717d7831d8489981beceafac4122}{isEmpty}()) \textcolor{comment}{//checks if the drivers Q is empty}
+7     \{
+8        fl\_alert(\textcolor{stringliteral}{"Not enough drivers"}); \textcolor{comment}{//shows alerts that there are no more drivers}
+9        Fl::add\_timeout(5,\hyperlink{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{delivery\_cb}); \textcolor{comment}{//checks again if there are any drivers in the Q after 5
+       sec}
+10         \}
+11     \textcolor{keywordflow}{else}
+12     \{
+13         std::string dname;
+14         \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{Remove}(dname);\textcolor{comment}{//removes the driver who is ready for delivery}
+15         \hyperlink{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{currD}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(dname); \textcolor{comment}{//puts the same driver in a different RBQ which is for the drivers
+       who are out for delivery}
+16         \hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{Remove}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord});\textcolor{comment}{//removes the pizza from the cooked Q}
+17         std::string temp = dname + \textcolor{stringliteral}{" is delivering the "}+ \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} + \textcolor{stringliteral}{" to "} + 
+      \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_a501ab180a46b15c372b77037ef5b3edc}{addr};
+18         fl\_alert(temp.c\_str());\textcolor{comment}{//alert that shows who is delivering the pizaa and where}
+19         \hyperlink{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}->text((\hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{// updates FLTK text in cooked Q box}
+20         \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{// updates FLTK text in drivers Q box}
+21         Fl::add\_timeout(100,\hyperlink{addBackDr__cb_8cpp_a8cfdf48b45c7a996149651583c14266d}{addBackDr\_cb}); \textcolor{comment}{//cb to the function which adds the drivers back
+       after they do delivery}
+22         \}
+23    
+24     \}
+\end{DoxyCode}

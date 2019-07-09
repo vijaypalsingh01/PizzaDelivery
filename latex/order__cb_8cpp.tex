@@ -1,0 +1,78 @@
+\hypertarget{order__cb_8cpp}{\subsection{order\+\_\+cb.\+cpp File Reference}
+\label{order__cb_8cpp}\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for order\+\_\+cb.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{order__cb_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{order__cb_8cpp_a547f84331a8c529348e1130ca169c69c}{order\+\_\+cb} (void $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function to order a pizza void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structORDER}{O\+R\+D\+E\+R} \hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord}
+\item 
+\hyperlink{classLLQUEUE}{L\+L\+Q\+U\+E\+U\+E} \hyperlink{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{o}
+\item 
+\hyperlink{classLLQUEUE}{L\+L\+Q\+U\+E\+U\+E} \hyperlink{order__cb_8cpp_a5574ed76bfb4e719e874d19f2d247625}{c}
+\item 
+\hyperlink{classRBQUEUE}{R\+B\+Q\+U\+E\+U\+E} \hyperlink{order__cb_8cpp_a87b7985f8561b2ac6c65961ab55b326e}{d}
+\item 
+\hyperlink{classRBQUEUE}{R\+B\+Q\+U\+E\+U\+E} \hyperlink{order__cb_8cpp_a0fc2dbd38da95932f1a2331561cf9a4e}{curr\+D}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{order__cb_8cpp_a547f84331a8c529348e1130ca169c69c}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!order\+\_\+cb@{order\+\_\+cb}}
+\index{order\+\_\+cb@{order\+\_\+cb}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{order\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void order\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{order__cb_8cpp_a547f84331a8c529348e1130ca169c69c}
+
+
+This is the callback function to order a pizza void pointers not used return void. 
+
+
+\begin{DoxyCode}
+9 \{  
+10     fl\_alert(\hyperlink{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{pizza}->value()); \textcolor{comment}{//shows alert with input values}
+11     fl\_alert(\hyperlink{lab_8h_a0ce7586472726848924b4964b80e69ba}{address}->value());
+12    
+13     \hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} = \hyperlink{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{pizza}->value(); 
+14     \hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_a501ab180a46b15c372b77037ef5b3edc}{addr} = \hyperlink{lab_8h_a0ce7586472726848924b4964b80e69ba}{address}->value();
+15    
+16     \hyperlink{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{Insert}(\hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord});\textcolor{comment}{//inserts the data into order Q}
+17     
+18     \hyperlink{lab_8h_aea2b8efadc87a819fe57c311d668e504}{buff}->text((\hyperlink{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{// updates th order Q in FLTK}
+19 
+20     Fl::add\_timeout(10,\hyperlink{cook__cb_8cpp_abb6fd11336b6e04e134b70abc225a8f6}{cook\_cb}); \textcolor{comment}{//calls back the cook function }
+21     \}
+\end{DoxyCode}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{order__cb_8cpp_a5574ed76bfb4e719e874d19f2d247625}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!c@{c}}
+\index{c@{c}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+L\+Q\+U\+E\+U\+E} c}}\label{order__cb_8cpp_a5574ed76bfb4e719e874d19f2d247625}
+\hypertarget{order__cb_8cpp_a0fc2dbd38da95932f1a2331561cf9a4e}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!curr\+D@{curr\+D}}
+\index{curr\+D@{curr\+D}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{curr\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+Q\+U\+E\+U\+E} curr\+D}}\label{order__cb_8cpp_a0fc2dbd38da95932f1a2331561cf9a4e}
+\hypertarget{order__cb_8cpp_a87b7985f8561b2ac6c65961ab55b326e}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!d@{d}}
+\index{d@{d}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{d}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+Q\+U\+E\+U\+E} d}}\label{order__cb_8cpp_a87b7985f8561b2ac6c65961ab55b326e}
+\hypertarget{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!o@{o}}
+\index{o@{o}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{o}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+L\+Q\+U\+E\+U\+E} o}}\label{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}
+\hypertarget{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{\index{order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}!ord@{ord}}
+\index{ord@{ord}!order\+\_\+cb.\+cpp@{order\+\_\+cb.\+cpp}}
+\paragraph[{ord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+R\+D\+E\+R} ord}}\label{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}

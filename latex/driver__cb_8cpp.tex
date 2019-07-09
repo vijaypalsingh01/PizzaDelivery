@@ -1,0 +1,40 @@
+\hypertarget{driver__cb_8cpp}{\subsection{driver\+\_\+cb.\+cpp File Reference}
+\label{driver__cb_8cpp}\index{driver\+\_\+cb.\+cpp@{driver\+\_\+cb.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for driver\+\_\+cb.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{driver__cb_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{driver__cb_8cpp_a2edcbf888225d725652a44b6a98d64c2}{driver\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function to add drivers manually void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{driver__cb_8cpp_a2edcbf888225d725652a44b6a98d64c2}{\index{driver\+\_\+cb.\+cpp@{driver\+\_\+cb.\+cpp}!driver\+\_\+cb@{driver\+\_\+cb}}
+\index{driver\+\_\+cb@{driver\+\_\+cb}!driver\+\_\+cb.\+cpp@{driver\+\_\+cb.\+cpp}}
+\paragraph[{driver\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void driver\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{driver__cb_8cpp_a2edcbf888225d725652a44b6a98d64c2}
+
+
+This is the callback function to add drivers manually void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{   
+5    fl\_alert(\hyperlink{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}->value()); \textcolor{comment}{//shows alert for the driver who is being added by the user}
+6    std::string name;
+7    name = \hyperlink{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}->value();
+8      \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(name); \textcolor{comment}{//inserts the driver in the driversQ}
+9     \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{// updates the FLTK driversQ box}
+10     \}
+\end{DoxyCode}

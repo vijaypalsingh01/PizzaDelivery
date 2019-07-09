@@ -1,0 +1,311 @@
+\hypertarget{lab_8h}{\subsection{lab.\+h File Reference}
+\label{lab_8h}\index{lab.\+h@{lab.\+h}}
+}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Cairo\+\_\+\+Window.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Input.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Output.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Text\+\_\+\+Buffer.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Text\+\_\+\+Display.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Button.\+H$>$}\\*
+{\ttfamily \#include $<$F\+L/fl\+\_\+ask.\+H$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+Include dependency graph for lab.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lab_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lab_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structORDER}{O\+R\+D\+E\+R}
+\begin{DoxyCompactList}\small\item\em struct named \hyperlink{structORDER}{O\+R\+D\+E\+R} which will have the name of the pizza and the address for delivery \end{DoxyCompactList}\item 
+struct \hyperlink{structNODE}{N\+O\+D\+E}
+\begin{DoxyCompactList}\small\item\em struct \hyperlink{structNODE}{N\+O\+D\+E} that will be used to make linked list \end{DoxyCompactList}\item 
+class \hyperlink{classLLQUEUE}{L\+L\+Q\+U\+E\+U\+E}
+\item 
+class \hyperlink{classRBQUEUE}{R\+B\+Q\+U\+E\+U\+E}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lab_8h_a547f84331a8c529348e1130ca169c69c}{order\+\_\+cb} (void $\ast$, void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function to order a pizza void pointers not used return void. \end{DoxyCompactList}\item 
+void \hyperlink{lab_8h_a2edcbf888225d725652a44b6a98d64c2}{driver\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function to add drivers manually void pointers not used return void. \end{DoxyCompactList}\item 
+void \hyperlink{lab_8h_abb6fd11336b6e04e134b70abc225a8f6}{cook\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called from the order\+\_\+cb function which cooks the pizza void pointer not used return void. \end{DoxyCompactList}\item 
+void \hyperlink{lab_8h_a991653c5063a84cb2fa299a9738892da}{delivery\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called from the cook\+\_\+cb function which assigns and send drivers out for delivery after the pizza is cooked void pointers not used return void. \end{DoxyCompactList}\item 
+void \hyperlink{lab_8h_a8cfdf48b45c7a996149651583c14266d}{add\+Back\+Dr\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called fron delivery which adds the driver back in the queue after they deliver the pizza void pointers not used return void. \end{DoxyCompactList}\item 
+void \hyperlink{lab_8h_a13ed8751dfa95731ad8930762493b16b}{timer} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is a time function which keeps track of the time void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{pizza}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{lab_8h_a0ce7586472726848924b4964b80e69ba}{address}
+\item 
+Fl\+\_\+\+Input $\ast$ \hyperlink{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}
+\item 
+Fl\+\_\+\+Output $\ast$ \hyperlink{lab_8h_a05c7f6e86cca5f4d0ebf44d1f5042c37}{watch}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{lab_8h_aea2b8efadc87a819fe57c311d668e504}{buff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Buffer $\ast$ \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{lab_8h_a20a356461cec27fe0d294f923f7ebd01}{driver\+Q}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{lab_8h_a23f917547a833922fd6bc8797cc04ee1}{order\+Q}
+\item 
+Fl\+\_\+\+Text\+\_\+\+Display $\ast$ \hyperlink{lab_8h_ad042fec17c471064617911f13dca15a8}{cooked\+Q}
+\item 
+const int \hyperlink{lab_8h_ad69f678058ac1e2c6d82212fd735b7a4}{B\+U\+F\+S\+I\+Z\+E} = 256
+\item 
+\hyperlink{structORDER}{O\+R\+D\+E\+R} \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}
+\item 
+\hyperlink{classLLQUEUE}{L\+L\+Q\+U\+E\+U\+E} \hyperlink{lab_8h_a6131f0484df536b2c26a825ec37671a2}{o}
+\item 
+\hyperlink{classLLQUEUE}{L\+L\+Q\+U\+E\+U\+E} \hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}
+\item 
+\hyperlink{classRBQUEUE}{R\+B\+Q\+U\+E\+U\+E} \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}
+\item 
+\hyperlink{classRBQUEUE}{R\+B\+Q\+U\+E\+U\+E} \hyperlink{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{curr\+D}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{lab_8h_a8cfdf48b45c7a996149651583c14266d}{\index{lab.\+h@{lab.\+h}!add\+Back\+Dr\+\_\+cb@{add\+Back\+Dr\+\_\+cb}}
+\index{add\+Back\+Dr\+\_\+cb@{add\+Back\+Dr\+\_\+cb}!lab.\+h@{lab.\+h}}
+\paragraph[{add\+Back\+Dr\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Back\+Dr\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_a8cfdf48b45c7a996149651583c14266d}
+
+
+This is the callback function called fron delivery which adds the driver back in the queue after they deliver the pizza void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{
+5     std::string Dback; \textcolor{comment}{//will be used to display alert}
+6     \hyperlink{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{currD}.\hyperlink{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{Remove}(Dback);\textcolor{comment}{//removes the driver from the queue of drivers who are currently
+       delivering}
+7     \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(Dback); \textcolor{comment}{//inserts the driver to the original driver queue who is ready to deliver}
+8     \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{//updates the text in FLTK}
+9     std::string alrt; \textcolor{comment}{//string that will help display alert}
+10     alrt = Dback + \textcolor{stringliteral}{" is back from delivery"};
+11     fl\_alert(alrt.c\_str()); \textcolor{comment}{//shows alert when the driver is back}
+12     \}
+\end{DoxyCode}
+\hypertarget{lab_8h_abb6fd11336b6e04e134b70abc225a8f6}{\index{lab.\+h@{lab.\+h}!cook\+\_\+cb@{cook\+\_\+cb}}
+\index{cook\+\_\+cb@{cook\+\_\+cb}!lab.\+h@{lab.\+h}}
+\paragraph[{cook\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void cook\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_abb6fd11336b6e04e134b70abc225a8f6}
+
+
+This is the callback function called from the order\+\_\+cb function which cooks the pizza void pointer not used return void. 
+
+
+\begin{DoxyCode}
+3 \{   
+4     \hyperlink{lab_8h_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{Remove}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}); \textcolor{comment}{//removes the data from the order queue}
+5     \hyperlink{lab_8h_aea2b8efadc87a819fe57c311d668e504}{buff}->text((\hyperlink{lab_8h_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str()));\textcolor{comment}{//updates the data for FLTK in the order Q}
+6     \hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{Insert}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}); \textcolor{comment}{//inserts the data into the cooked Q}
+7     
+8     \hyperlink{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}->text((\hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{//Updates the FLTK text box for cooked Q}
+9     
+10     std::string alrt = \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} + \textcolor{stringliteral}{" is cooked"};
+11     fl\_alert(alrt.c\_str()); \textcolor{comment}{//shows alert that the pizza is cooked}
+12     
+13     Fl::add\_timeout(3,\hyperlink{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{delivery\_cb}); \textcolor{comment}{//calls back the delivery\_cb function with 3 sec delay for
+       us to actually see whats happening}
+14     
+15 \}
+\end{DoxyCode}
+\hypertarget{lab_8h_a991653c5063a84cb2fa299a9738892da}{\index{lab.\+h@{lab.\+h}!delivery\+\_\+cb@{delivery\+\_\+cb}}
+\index{delivery\+\_\+cb@{delivery\+\_\+cb}!lab.\+h@{lab.\+h}}
+\paragraph[{delivery\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void delivery\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_a991653c5063a84cb2fa299a9738892da}
+
+
+This is the callback function called from the cook\+\_\+cb function which assigns and send drivers out for delivery after the pizza is cooked void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{   
+5     
+6      \textcolor{keywordflow}{if}(\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a3a97717d7831d8489981beceafac4122}{isEmpty}()) \textcolor{comment}{//checks if the drivers Q is empty}
+7     \{
+8        fl\_alert(\textcolor{stringliteral}{"Not enough drivers"}); \textcolor{comment}{//shows alerts that there are no more drivers}
+9        Fl::add\_timeout(5,\hyperlink{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{delivery\_cb}); \textcolor{comment}{//checks again if there are any drivers in the Q after 5
+       sec}
+10         \}
+11     \textcolor{keywordflow}{else}
+12     \{
+13         std::string dname;
+14         \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{Remove}(dname);\textcolor{comment}{//removes the driver who is ready for delivery}
+15         \hyperlink{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{currD}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(dname); \textcolor{comment}{//puts the same driver in a different RBQ which is for the drivers
+       who are out for delivery}
+16         \hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{Remove}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord});\textcolor{comment}{//removes the pizza from the cooked Q}
+17         std::string temp = dname + \textcolor{stringliteral}{" is delivering the "}+ \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} + \textcolor{stringliteral}{" to "} + 
+      \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_a501ab180a46b15c372b77037ef5b3edc}{addr};
+18         fl\_alert(temp.c\_str());\textcolor{comment}{//alert that shows who is delivering the pizaa and where}
+19         \hyperlink{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}->text((\hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{// updates FLTK text in cooked Q box}
+20         \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{// updates FLTK text in drivers Q box}
+21         Fl::add\_timeout(100,\hyperlink{addBackDr__cb_8cpp_a8cfdf48b45c7a996149651583c14266d}{addBackDr\_cb}); \textcolor{comment}{//cb to the function which adds the drivers back
+       after they do delivery}
+22         \}
+23    
+24     \}
+\end{DoxyCode}
+\hypertarget{lab_8h_a2edcbf888225d725652a44b6a98d64c2}{\index{lab.\+h@{lab.\+h}!driver\+\_\+cb@{driver\+\_\+cb}}
+\index{driver\+\_\+cb@{driver\+\_\+cb}!lab.\+h@{lab.\+h}}
+\paragraph[{driver\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void driver\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_a2edcbf888225d725652a44b6a98d64c2}
+
+
+This is the callback function to add drivers manually void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{   
+5    fl\_alert(\hyperlink{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}->value()); \textcolor{comment}{//shows alert for the driver who is being added by the user}
+6    std::string name;
+7    name = \hyperlink{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{driver}->value();
+8      \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(name); \textcolor{comment}{//inserts the driver in the driversQ}
+9     \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{// updates the FLTK driversQ box}
+10     \}
+\end{DoxyCode}
+\hypertarget{lab_8h_a547f84331a8c529348e1130ca169c69c}{\index{lab.\+h@{lab.\+h}!order\+\_\+cb@{order\+\_\+cb}}
+\index{order\+\_\+cb@{order\+\_\+cb}!lab.\+h@{lab.\+h}}
+\paragraph[{order\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void order\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_a547f84331a8c529348e1130ca169c69c}
+
+
+This is the callback function to order a pizza void pointers not used return void. 
+
+
+\begin{DoxyCode}
+9 \{  
+10     fl\_alert(\hyperlink{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{pizza}->value()); \textcolor{comment}{//shows alert with input values}
+11     fl\_alert(\hyperlink{lab_8h_a0ce7586472726848924b4964b80e69ba}{address}->value());
+12    
+13     \hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} = \hyperlink{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{pizza}->value(); 
+14     \hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_a501ab180a46b15c372b77037ef5b3edc}{addr} = \hyperlink{lab_8h_a0ce7586472726848924b4964b80e69ba}{address}->value();
+15    
+16     \hyperlink{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{Insert}(\hyperlink{order__cb_8cpp_a332f3283fc67e4d87244860ec1f0e880}{ord});\textcolor{comment}{//inserts the data into order Q}
+17     
+18     \hyperlink{lab_8h_aea2b8efadc87a819fe57c311d668e504}{buff}->text((\hyperlink{order__cb_8cpp_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{// updates th order Q in FLTK}
+19 
+20     Fl::add\_timeout(10,\hyperlink{cook__cb_8cpp_abb6fd11336b6e04e134b70abc225a8f6}{cook\_cb}); \textcolor{comment}{//calls back the cook function }
+21     \}
+\end{DoxyCode}
+\hypertarget{lab_8h_a13ed8751dfa95731ad8930762493b16b}{\index{lab.\+h@{lab.\+h}!timer@{timer}}
+\index{timer@{timer}!lab.\+h@{lab.\+h}}
+\paragraph[{timer}]{\setlength{\rightskip}{0pt plus 5cm}void timer (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{lab_8h_a13ed8751dfa95731ad8930762493b16b}
+
+
+This is a time function which keeps track of the time void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{comment}{//std::cout << "1 sec" << std::endl;}
+6     \textcolor{keyword}{static} \textcolor{keywordtype}{int} s = 0; \textcolor{keyword}{static} \textcolor{keywordtype}{int} m = 0;
+7     std::ostringstream oss; 
+8     
+9     s++; \textcolor{keywordflow}{if} (s == 59) \{s=0; m++;\}
+10     oss << std::setfill(\textcolor{charliteral}{'0'});
+11     oss << std::setw(2) << m << \textcolor{stringliteral}{":"} << std::setw(2) << s;
+12     \hyperlink{lab_8h_a05c7f6e86cca5f4d0ebf44d1f5042c37}{watch}->value(oss.str().c\_str());
+13     
+14     Fl::repeat\_timeout(1,\hyperlink{timer_8cpp_a13ed8751dfa95731ad8930762493b16b}{timer}); \textcolor{comment}{//repeats after every second}
+15  
+16 \}
+\end{DoxyCode}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{lab_8h_a0ce7586472726848924b4964b80e69ba}{\index{lab.\+h@{lab.\+h}!address@{address}}
+\index{address@{address}!lab.\+h@{lab.\+h}}
+\paragraph[{address}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ address}}\label{lab_8h_a0ce7586472726848924b4964b80e69ba}
+\hypertarget{lab_8h_aea2b8efadc87a819fe57c311d668e504}{\index{lab.\+h@{lab.\+h}!buff@{buff}}
+\index{buff@{buff}!lab.\+h@{lab.\+h}}
+\paragraph[{buff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ buff}}\label{lab_8h_aea2b8efadc87a819fe57c311d668e504}
+\hypertarget{lab_8h_ad69f678058ac1e2c6d82212fd735b7a4}{\index{lab.\+h@{lab.\+h}!B\+U\+F\+S\+I\+Z\+E@{B\+U\+F\+S\+I\+Z\+E}}
+\index{B\+U\+F\+S\+I\+Z\+E@{B\+U\+F\+S\+I\+Z\+E}!lab.\+h@{lab.\+h}}
+\paragraph[{B\+U\+F\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int B\+U\+F\+S\+I\+Z\+E = 256}}\label{lab_8h_ad69f678058ac1e2c6d82212fd735b7a4}
+\hypertarget{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{\index{lab.\+h@{lab.\+h}!c@{c}}
+\index{c@{c}!lab.\+h@{lab.\+h}}
+\paragraph[{c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+L\+Q\+U\+E\+U\+E} c}}\label{lab_8h_a5574ed76bfb4e719e874d19f2d247625}
+\hypertarget{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{\index{lab.\+h@{lab.\+h}!cbuff@{cbuff}}
+\index{cbuff@{cbuff}!lab.\+h@{lab.\+h}}
+\paragraph[{cbuff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ cbuff}}\label{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}
+\hypertarget{lab_8h_ad042fec17c471064617911f13dca15a8}{\index{lab.\+h@{lab.\+h}!cooked\+Q@{cooked\+Q}}
+\index{cooked\+Q@{cooked\+Q}!lab.\+h@{lab.\+h}}
+\paragraph[{cooked\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ cooked\+Q}}\label{lab_8h_ad042fec17c471064617911f13dca15a8}
+\hypertarget{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{\index{lab.\+h@{lab.\+h}!curr\+D@{curr\+D}}
+\index{curr\+D@{curr\+D}!lab.\+h@{lab.\+h}}
+\paragraph[{curr\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+Q\+U\+E\+U\+E} curr\+D}}\label{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}
+\hypertarget{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{\index{lab.\+h@{lab.\+h}!d@{d}}
+\index{d@{d}!lab.\+h@{lab.\+h}}
+\paragraph[{d}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+B\+Q\+U\+E\+U\+E} d}}\label{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}
+\hypertarget{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{\index{lab.\+h@{lab.\+h}!dbuff@{dbuff}}
+\index{dbuff@{dbuff}!lab.\+h@{lab.\+h}}
+\paragraph[{dbuff}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Buffer$\ast$ dbuff}}\label{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}
+\hypertarget{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}{\index{lab.\+h@{lab.\+h}!driver@{driver}}
+\index{driver@{driver}!lab.\+h@{lab.\+h}}
+\paragraph[{driver}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ driver}}\label{lab_8h_a6f3dbb90a24ffb00549fdd15a79cbd66}
+\hypertarget{lab_8h_a20a356461cec27fe0d294f923f7ebd01}{\index{lab.\+h@{lab.\+h}!driver\+Q@{driver\+Q}}
+\index{driver\+Q@{driver\+Q}!lab.\+h@{lab.\+h}}
+\paragraph[{driver\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ driver\+Q}}\label{lab_8h_a20a356461cec27fe0d294f923f7ebd01}
+\hypertarget{lab_8h_a6131f0484df536b2c26a825ec37671a2}{\index{lab.\+h@{lab.\+h}!o@{o}}
+\index{o@{o}!lab.\+h@{lab.\+h}}
+\paragraph[{o}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+L\+Q\+U\+E\+U\+E} o}}\label{lab_8h_a6131f0484df536b2c26a825ec37671a2}
+\hypertarget{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{\index{lab.\+h@{lab.\+h}!ord@{ord}}
+\index{ord@{ord}!lab.\+h@{lab.\+h}}
+\paragraph[{ord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+R\+D\+E\+R} ord}}\label{lab_8h_a332f3283fc67e4d87244860ec1f0e880}
+\hypertarget{lab_8h_a23f917547a833922fd6bc8797cc04ee1}{\index{lab.\+h@{lab.\+h}!order\+Q@{order\+Q}}
+\index{order\+Q@{order\+Q}!lab.\+h@{lab.\+h}}
+\paragraph[{order\+Q}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Text\+\_\+\+Display$\ast$ order\+Q}}\label{lab_8h_a23f917547a833922fd6bc8797cc04ee1}
+\hypertarget{lab_8h_abf805c82a90897837d1c26ef915f1cd6}{\index{lab.\+h@{lab.\+h}!pizza@{pizza}}
+\index{pizza@{pizza}!lab.\+h@{lab.\+h}}
+\paragraph[{pizza}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Input$\ast$ pizza}}\label{lab_8h_abf805c82a90897837d1c26ef915f1cd6}
+\hypertarget{lab_8h_a05c7f6e86cca5f4d0ebf44d1f5042c37}{\index{lab.\+h@{lab.\+h}!watch@{watch}}
+\index{watch@{watch}!lab.\+h@{lab.\+h}}
+\paragraph[{watch}]{\setlength{\rightskip}{0pt plus 5cm}Fl\+\_\+\+Output$\ast$ watch}}\label{lab_8h_a05c7f6e86cca5f4d0ebf44d1f5042c37}

@@ -1,0 +1,48 @@
+/** \page Specification
+
+This program uses FLTK as a GUI. The main purpose of the program is to use queue for a pizza delivery.
+This function gets the drivers' names from the user using FLTK and stores the drivers in the driver ring buffer Queue.
+This function also gets the pizza input in the FLTK by the user and stores it in "order Queue" which is Linked list Queue and then few seconds
+later puts the pizza in the "cooked Queue" after it is cooked by calling the cooked_cb function. It then calls back
+the delivery_cb which removes the driver from the drivers RBQueue and the driver gets put into the temporary RBQ for delivery, and the pizza is also removed from the cooked LLQueue.
+If there is no driver in the queue the function then checks again after 5 seconds if there are any drivers.
+After 100 seconds the drivers who were on delivery are removed from the temporary RBQ and inserted back into the drivers Q.
+
+
+*/
+
+/** \page Analysis
+
+\li The input will be: The Pizza and the delivery address will be input by the user and the user will be able to click the order button
+to place the order. The program then calls back appropriate functions associated to the order button. The user is also required to input
+ the drivers manually for the first time and click the add button to add the driver and 
+    then they are added automatically after they are done delivering.
+
+\li The output will be: The alerts that FLTK shows after the order is placed have the input values from the user. Once the order is cooked there is 
+another alert that shows that order is cooked. Then the driver's name, the pizza, and the delivery address shows up when it is ready to deliver. There is another alert stating the driver is back from 
+delivery once he or she is back from delivery. Along with the alerts, there is also an output of 3 Queues which are updated everytime something is removed or inserted. The program uses a function from the Queue class to show
+ all the data in the FLTK Queue boxes. There is also a small clock which manages the time.
+
+\li The overall Algorithim is: The program uses call back functions to run. Ather the user inputs the drivers name, the user is required to press the 
+add button which class the driver_cb function and adds the driver in the RBQueue. After the pizza and the address input the user is required to click the order button,
+which calls back the order_cb and puts the order into the LLQueue. After few seconds the cook_cb function is called which removes the order from the OrderQ and places it in the cookedQ. It
+then calls the delivery_cb which removes the driver and the cooked order and send it delivery. If there are no drivers the programs keeps checking for the drivers in the queue and sends the order once it is ready.
+the driver is added to a temp RBQ when he or she is out for delivery and then gets removed from the temp and added to the drivers Q when he or she comes back from delivery.
+*/
+
+/** \page Design
+\li addBackDr_cb.cpp: adds the drivers back after the delivery
+\li cook_cb.cpp: cooks the order
+\li delivery_cb.cpp: sends the driver for delivery with the pizza. Both are removed from the Qs
+\li driver_cb: adds driver to the Queue
+\li getQcontent.cpp: gets a string will all the data in the Q
+\li getRQcontent.cpp: gets a string will all the data in the Q
+\li insert.cpp: inserts the data into the Q
+\li main.cpp: takes care of the FLTK design and call backs from the buttons
+\li remove.cpp: removes data from the Queue
+\li timer.cpp: manages the clock with time in FLTK window
+
+*/
+/** \page Testcase
+
+see movie named "vijaypal.mp4" which is included in the tgz file

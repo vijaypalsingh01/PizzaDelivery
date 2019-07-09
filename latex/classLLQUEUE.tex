@@ -1,0 +1,199 @@
+\hypertarget{classLLQUEUE}{\subsection{L\+L\+Q\+U\+E\+U\+E Class Reference}
+\label{classLLQUEUE}\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+}
+
+
+{\ttfamily \#include $<$lab.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLLQUEUE_a228f05ff67aeb119b3bfbe0bbb194b20}{L\+L\+Q\+U\+E\+U\+E} ()
+\begin{DoxyCompactList}\small\item\em constructor of the queue class which sets the value of the private functions to 0 \end{DoxyCompactList}\item 
+\hyperlink{classLLQUEUE_a2ae375ef2a7ee584da27b7aa5ef0b4e8}{$\sim$\+L\+L\+Q\+U\+E\+U\+E} ()
+\begin{DoxyCompactList}\small\item\em destructor of the queue class which removes all the data from the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{Insert} (\hyperlink{structORDER}{O\+R\+D\+E\+R} \&info)
+\begin{DoxyCompactList}\small\item\em insert adds data into the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{Remove} (\hyperlink{structORDER}{O\+R\+D\+E\+R} \&info)
+\begin{DoxyCompactList}\small\item\em removed data from the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classLLQUEUE_acf5810657663dfbb5ac62407bd78950c}{is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em checks if the queue is empty \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{get\+Qcontent} ()
+\begin{DoxyCompactList}\small\item\em gives the user all the data that is present in the queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classLLQUEUE_a228f05ff67aeb119b3bfbe0bbb194b20}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{L\+L\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}L\+L\+Q\+U\+E\+U\+E\+::\+L\+L\+Q\+U\+E\+U\+E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classLLQUEUE_a228f05ff67aeb119b3bfbe0bbb194b20}
+
+
+constructor of the queue class which sets the value of the private functions to 0 
+
+
+\begin{DoxyCode}
+92 \{front=rear=0;\};
+\end{DoxyCode}
+\hypertarget{classLLQUEUE_a2ae375ef2a7ee584da27b7aa5ef0b4e8}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!````~L\+L\+Q\+U\+E\+U\+E@{$\sim$\+L\+L\+Q\+U\+E\+U\+E}}
+\index{````~L\+L\+Q\+U\+E\+U\+E@{$\sim$\+L\+L\+Q\+U\+E\+U\+E}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{$\sim$\+L\+L\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}L\+L\+Q\+U\+E\+U\+E\+::$\sim$\+L\+L\+Q\+U\+E\+U\+E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLLQUEUE_a2ae375ef2a7ee584da27b7aa5ef0b4e8}
+
+
+destructor of the queue class which removes all the data from the queue 
+
+
+\begin{DoxyCode}
+3 \{
+4     \hyperlink{structNODE}{NODE} *next;
+5     \textcolor{keywordflow}{while} (front)
+6     \{
+7         next= front->\hyperlink{structNODE_a078472e8ab2d2fe38e052f5c2a425618}{next};
+8         \textcolor{keyword}{delete} front; \textcolor{comment}{//deletes the front }
+9         front = next; \textcolor{comment}{//sets the front to the next node}
+10         \}
+11     \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!get\+Qcontent@{get\+Qcontent}}
+\index{get\+Qcontent@{get\+Qcontent}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{get\+Qcontent}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string L\+L\+Q\+U\+E\+U\+E\+::get\+Qcontent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}
+
+
+gives the user all the data that is present in the queue 
+
+\begin{DoxyReturn}{Returns}
+string containing all the data that is stored in the queue 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     std::string str;
+6     \hyperlink{structNODE}{NODE} *node;
+7         \textcolor{keywordflow}{for}(node = front; node; node = node->\hyperlink{structNODE_a078472e8ab2d2fe38e052f5c2a425618}{next})\textcolor{comment}{// sets node to the front, if node is not null, make
+       node equal the the next node}
+8         \{
+9             str += node->\hyperlink{structNODE_a8ae24fb8df6ea326ce23cab9331efdd6}{info}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} + \textcolor{stringliteral}{"\(\backslash\)n"}; \textcolor{comment}{//stors the data in the list into str string one by one}
+10             
+11             \}
+12     \textcolor{keywordflow}{return} str; \textcolor{comment}{//returns the whole str with all the data}
+13     \}
+\end{DoxyCode}
+\hypertarget{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!Insert@{Insert}}
+\index{Insert@{Insert}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}bool L\+L\+Q\+U\+E\+U\+E\+::\+Insert (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+R\+D\+E\+R} \&}]{info}
+\end{DoxyParamCaption}
+)}}\label{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}
+
+
+insert adds data into the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em info} & is the data that will be added into the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indication if the data was inserted successfully 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+3 \{
+4     \hyperlink{structNODE}{NODE} *newnode = \textcolor{keyword}{new} \hyperlink{structNODE}{NODE}; \textcolor{comment}{//allocates a new node}
+5     \textcolor{keywordflow}{if}(!newnode) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+6     newnode->\hyperlink{structNODE_a8ae24fb8df6ea326ce23cab9331efdd6}{info} = info;
+7     newnode->\hyperlink{structNODE_a078472e8ab2d2fe38e052f5c2a425618}{next} = 0;
+8     
+9     \textcolor{keywordflow}{if}(rear == 0)\textcolor{comment}{//if rear is null}
+10     \{
+11         front = rear= newnode; \textcolor{comment}{//set front and rear to the new node}
+12         \}
+13     \textcolor{keywordflow}{else}
+14     \{
+15         rear->\hyperlink{structNODE_a078472e8ab2d2fe38e052f5c2a425618}{next} = newnode;
+16         rear= newnode;
+17         \}
+18 
+19 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+20 \}
+\end{DoxyCode}
+\hypertarget{classLLQUEUE_acf5810657663dfbb5ac62407bd78950c}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool L\+L\+Q\+U\+E\+U\+E\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classLLQUEUE_acf5810657663dfbb5ac62407bd78950c}
+
+
+checks if the queue is empty 
+
+\begin{DoxyReturn}{Returns}
+boolean indication if the queue is empty or not 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+113 \{\textcolor{keywordflow}{return} (front ==0);\}
+\end{DoxyCode}
+\hypertarget{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{\index{L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}!Remove@{Remove}}
+\index{Remove@{Remove}!L\+L\+Q\+U\+E\+U\+E@{L\+L\+Q\+U\+E\+U\+E}}
+\paragraph[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}bool L\+L\+Q\+U\+E\+U\+E\+::\+Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf O\+R\+D\+E\+R} \&}]{info}
+\end{DoxyParamCaption}
+)}}\label{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}
+
+
+removed data from the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em info} & is the data that will be removed from the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indication if the data was removed successfully 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+3 \{
+4     \textcolor{keywordflow}{if} (front == 0)
+5     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+6     
+7     info = front->\hyperlink{structNODE_a8ae24fb8df6ea326ce23cab9331efdd6}{info}; \textcolor{comment}{//sets info to the info being removed}
+8     
+9     \hyperlink{structNODE}{NODE} *next;
+10     next = front->\hyperlink{structNODE_a078472e8ab2d2fe38e052f5c2a425618}{next};
+11     \textcolor{keyword}{delete} front; \textcolor{comment}{//delets front}
+12     front = next; \textcolor{comment}{//front equals the next node}
+13     \textcolor{keywordflow}{if} (front ==0)
+14     \{
+15         rear =0;
+16         \}
+17     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+18     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lab_8h}{lab.\+h}\item 
+\hyperlink{getQcontent_8cpp}{get\+Qcontent.\+cpp}\item 
+\hyperlink{Insert_8cpp}{Insert.\+cpp}\item 
+\hyperlink{llqueue_8cpp}{llqueue.\+cpp}\item 
+\hyperlink{Remove_8cpp}{Remove.\+cpp}\end{DoxyCompactItemize}

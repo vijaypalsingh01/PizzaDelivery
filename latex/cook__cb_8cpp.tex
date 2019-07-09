@@ -1,0 +1,47 @@
+\hypertarget{cook__cb_8cpp}{\subsection{cook\+\_\+cb.\+cpp File Reference}
+\label{cook__cb_8cpp}\index{cook\+\_\+cb.\+cpp@{cook\+\_\+cb.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for cook\+\_\+cb.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cook__cb_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{cook__cb_8cpp_abb6fd11336b6e04e134b70abc225a8f6}{cook\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called from the order\+\_\+cb function which cooks the pizza void pointer not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{cook__cb_8cpp_abb6fd11336b6e04e134b70abc225a8f6}{\index{cook\+\_\+cb.\+cpp@{cook\+\_\+cb.\+cpp}!cook\+\_\+cb@{cook\+\_\+cb}}
+\index{cook\+\_\+cb@{cook\+\_\+cb}!cook\+\_\+cb.\+cpp@{cook\+\_\+cb.\+cpp}}
+\paragraph[{cook\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void cook\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{cook__cb_8cpp_abb6fd11336b6e04e134b70abc225a8f6}
+
+
+This is the callback function called from the order\+\_\+cb function which cooks the pizza void pointer not used return void. 
+
+
+\begin{DoxyCode}
+3 \{   
+4     \hyperlink{lab_8h_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_ab8d52943d24188adf0855a0ee9fa0afe}{Remove}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}); \textcolor{comment}{//removes the data from the order queue}
+5     \hyperlink{lab_8h_aea2b8efadc87a819fe57c311d668e504}{buff}->text((\hyperlink{lab_8h_a6131f0484df536b2c26a825ec37671a2}{o}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str()));\textcolor{comment}{//updates the data for FLTK in the order Q}
+6     \hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a2d53817739f7c273a3c0f14f7804c065}{Insert}(\hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}); \textcolor{comment}{//inserts the data into the cooked Q}
+7     
+8     \hyperlink{lab_8h_a3a16cd8310a89f45962eb39b72bb9bb1}{cbuff}->text((\hyperlink{lab_8h_a5574ed76bfb4e719e874d19f2d247625}{c}.\hyperlink{classLLQUEUE_a0e9bffdcd903a132b8f7899ccdbc0315}{getQcontent}().c\_str())); \textcolor{comment}{//Updates the FLTK text box for cooked Q}
+9     
+10     std::string alrt = \hyperlink{lab_8h_a332f3283fc67e4d87244860ec1f0e880}{ord}.\hyperlink{structORDER_aea87cd05ef2f7d3f6b2c5b9eebd0199d}{info} + \textcolor{stringliteral}{" is cooked"};
+11     fl\_alert(alrt.c\_str()); \textcolor{comment}{//shows alert that the pizza is cooked}
+12     
+13     Fl::add\_timeout(3,\hyperlink{delivery__cb_8cpp_a991653c5063a84cb2fa299a9738892da}{delivery\_cb}); \textcolor{comment}{//calls back the delivery\_cb function with 3 sec delay for
+       us to actually see whats happening}
+14     
+15 \}
+\end{DoxyCode}

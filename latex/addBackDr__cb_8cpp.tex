@@ -1,0 +1,43 @@
+\hypertarget{addBackDr__cb_8cpp}{\subsection{add\+Back\+Dr\+\_\+cb.\+cpp File Reference}
+\label{addBackDr__cb_8cpp}\index{add\+Back\+Dr\+\_\+cb.\+cpp@{add\+Back\+Dr\+\_\+cb.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}lab.\+h\char`\"{}}\\*
+Include dependency graph for add\+Back\+Dr\+\_\+cb.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addBackDr__cb_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{addBackDr__cb_8cpp_a8cfdf48b45c7a996149651583c14266d}{add\+Back\+Dr\+\_\+cb} (void $\ast$)
+\begin{DoxyCompactList}\small\item\em This is the callback function called fron delivery which adds the driver back in the queue after they deliver the pizza void pointers not used return void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{addBackDr__cb_8cpp_a8cfdf48b45c7a996149651583c14266d}{\index{add\+Back\+Dr\+\_\+cb.\+cpp@{add\+Back\+Dr\+\_\+cb.\+cpp}!add\+Back\+Dr\+\_\+cb@{add\+Back\+Dr\+\_\+cb}}
+\index{add\+Back\+Dr\+\_\+cb@{add\+Back\+Dr\+\_\+cb}!add\+Back\+Dr\+\_\+cb.\+cpp@{add\+Back\+Dr\+\_\+cb.\+cpp}}
+\paragraph[{add\+Back\+Dr\+\_\+cb}]{\setlength{\rightskip}{0pt plus 5cm}void add\+Back\+Dr\+\_\+cb (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{addBackDr__cb_8cpp_a8cfdf48b45c7a996149651583c14266d}
+
+
+This is the callback function called fron delivery which adds the driver back in the queue after they deliver the pizza void pointers not used return void. 
+
+
+\begin{DoxyCode}
+4 \{
+5     std::string Dback; \textcolor{comment}{//will be used to display alert}
+6     \hyperlink{lab_8h_a0fc2dbd38da95932f1a2331561cf9a4e}{currD}.\hyperlink{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{Remove}(Dback);\textcolor{comment}{//removes the driver from the queue of drivers who are currently
+       delivering}
+7     \hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert}(Dback); \textcolor{comment}{//inserts the driver to the original driver queue who is ready to deliver}
+8     \hyperlink{lab_8h_a5d487f4a7b5d36f823b8b1cb3db75aa4}{dbuff}->text((\hyperlink{lab_8h_a87b7985f8561b2ac6c65961ab55b326e}{d}.\hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{getRQcontents}().c\_str())); \textcolor{comment}{//updates the text in FLTK}
+9     std::string alrt; \textcolor{comment}{//string that will help display alert}
+10     alrt = Dback + \textcolor{stringliteral}{" is back from delivery"};
+11     fl\_alert(alrt.c\_str()); \textcolor{comment}{//shows alert when the driver is back}
+12     \}
+\end{DoxyCode}

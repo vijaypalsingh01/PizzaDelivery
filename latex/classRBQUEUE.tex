@@ -1,0 +1,194 @@
+\hypertarget{classRBQUEUE}{\subsection{R\+B\+Q\+U\+E\+U\+E Class Reference}
+\label{classRBQUEUE}\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+}
+
+
+{\ttfamily \#include $<$lab.\+h$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRBQUEUE_a7e58de52e8ee8cb73332477746cd4a99}{R\+B\+Q\+U\+E\+U\+E} ()
+\begin{DoxyCompactList}\small\item\em constructor of the ring buffer queue which sets the private data members to 0 \end{DoxyCompactList}\item 
+\hyperlink{classRBQUEUE_a4216cbcdbbf756fb92e2554923c8f9fc}{$\sim$\+R\+B\+Q\+U\+E\+U\+E} ()
+\begin{DoxyCompactList}\small\item\em destructor of the ring buffer queue which deletes all the data in the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{Insert} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em insert adds data into the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{Remove} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em removed data from the queue \end{DoxyCompactList}\item 
+bool \hyperlink{classRBQUEUE_a3a97717d7831d8489981beceafac4122}{is\+Empty} ()
+\begin{DoxyCompactList}\small\item\em checks if the queue is empty \end{DoxyCompactList}\item 
+bool \hyperlink{classRBQUEUE_ae8a4143bab8b1d41b0b3d2102ca2acbf}{is\+Full} ()
+\begin{DoxyCompactList}\small\item\em checks if the queue is full \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{get\+R\+Qcontents} ()
+\begin{DoxyCompactList}\small\item\em gives the user all the data that is present in the queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classRBQUEUE_a7e58de52e8ee8cb73332477746cd4a99}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{R\+B\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}R\+B\+Q\+U\+E\+U\+E\+::\+R\+B\+Q\+U\+E\+U\+E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRBQUEUE_a7e58de52e8ee8cb73332477746cd4a99}
+
+
+constructor of the ring buffer queue which sets the private data members to 0 
+
+
+\begin{DoxyCode}
+139 \{front = rear = 0;\}
+\end{DoxyCode}
+\hypertarget{classRBQUEUE_a4216cbcdbbf756fb92e2554923c8f9fc}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!````~R\+B\+Q\+U\+E\+U\+E@{$\sim$\+R\+B\+Q\+U\+E\+U\+E}}
+\index{````~R\+B\+Q\+U\+E\+U\+E@{$\sim$\+R\+B\+Q\+U\+E\+U\+E}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{$\sim$\+R\+B\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}R\+B\+Q\+U\+E\+U\+E\+::$\sim$\+R\+B\+Q\+U\+E\+U\+E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRBQUEUE_a4216cbcdbbf756fb92e2554923c8f9fc}
+
+
+destructor of the ring buffer queue which deletes all the data in the queue 
+
+
+\begin{DoxyCode}
+143 \{\}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!get\+R\+Qcontents@{get\+R\+Qcontents}}
+\index{get\+R\+Qcontents@{get\+R\+Qcontents}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{get\+R\+Qcontents}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string R\+B\+Q\+U\+E\+U\+E\+::get\+R\+Qcontents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRBQUEUE_a07b611e131d8f1b51579c4f760bb60ad}
+
+
+gives the user all the data that is present in the queue 
+
+\begin{DoxyReturn}{Returns}
+string containing all the data that is stored in the queue 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keywordtype}{int} curr;
+6     std::string drivers;
+7     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} curr=front; curr<rear; curr=nextIndex(curr))\textcolor{comment}{//sets current to the front, if curr is less than
+       rear, move current to the next index after front}
+8     \{
+9         drivers += buf[curr] + \textcolor{stringliteral}{"\(\backslash\)n"}; \textcolor{comment}{//stores all the data into the string}
+10         
+11         \}
+12     \textcolor{keywordflow}{return} drivers; \textcolor{comment}{//returns the string with all the data}
+13     \}
+\end{DoxyCode}
+\hypertarget{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!Insert@{Insert}}
+\index{Insert@{Insert}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{Insert}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+B\+Q\+U\+E\+U\+E\+::\+Insert (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{s}
+\end{DoxyParamCaption}
+)}}\label{classRBQUEUE_a14a2d1391fe60a74ff7d8dd4cec7454e}
+
+
+insert adds data into the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & is the data that will be added into the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indication if the data was inserted successfully 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keywordflow}{if}(\hyperlink{classRBQUEUE_ae8a4143bab8b1d41b0b3d2102ca2acbf}{isFull}())\textcolor{comment}{// if the Q is full}
+6     \{
+7         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+8         \}
+9     buf[rear]= s; \textcolor{comment}{// inserts the data}
+10     rear = nextIndex(rear); \textcolor{comment}{// rear is the next available index}
+11     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+12     \}
+\end{DoxyCode}
+\hypertarget{classRBQUEUE_a3a97717d7831d8489981beceafac4122}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+B\+Q\+U\+E\+U\+E\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRBQUEUE_a3a97717d7831d8489981beceafac4122}
+
+
+checks if the queue is empty 
+
+\begin{DoxyReturn}{Returns}
+boolean indication if the queue is empty or not 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+160 \{\textcolor{keywordflow}{return} (front == rear);\}
+\end{DoxyCode}
+\hypertarget{classRBQUEUE_ae8a4143bab8b1d41b0b3d2102ca2acbf}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!is\+Full@{is\+Full}}
+\index{is\+Full@{is\+Full}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{is\+Full}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+B\+Q\+U\+E\+U\+E\+::is\+Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classRBQUEUE_ae8a4143bab8b1d41b0b3d2102ca2acbf}
+
+
+checks if the queue is full 
+
+\begin{DoxyReturn}{Returns}
+boolean indication if the queue is full or not 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+165 \{\textcolor{keywordflow}{return} (nextIndex(rear) == front);\}
+\end{DoxyCode}
+\hypertarget{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}{\index{R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}!Remove@{Remove}}
+\index{Remove@{Remove}!R\+B\+Q\+U\+E\+U\+E@{R\+B\+Q\+U\+E\+U\+E}}
+\paragraph[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+B\+Q\+U\+E\+U\+E\+::\+Remove (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classRBQUEUE_a64ca2c69a4e8f81d5ed0fd5dc6faf443}
+
+
+removed data from the queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em s} & is the data that will be removed from the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean indication if the data was removed successfully 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keywordflow}{if}(\hyperlink{classRBQUEUE_a3a97717d7831d8489981beceafac4122}{isEmpty}())
+6     \{
+7         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+8         \}
+9    s = buf[front]; \textcolor{comment}{//sets s to the value being removed}
+10     front = nextIndex(front); \textcolor{comment}{// moves front to the next index}
+11     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+12     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lab_8h}{lab.\+h}\item 
+\hyperlink{getRQcontents_8cpp}{get\+R\+Qcontents.\+cpp}\item 
+\hyperlink{insert_8cpp}{insert.\+cpp}\item 
+\hyperlink{remove_8cpp}{remove.\+cpp}\end{DoxyCompactItemize}
